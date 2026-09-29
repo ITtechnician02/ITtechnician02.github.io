@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -26,6 +27,7 @@ header{
     align-items:center;
     position:sticky;
     top:0;
+    z-index:1000;
 }
 
 header h2{
@@ -123,10 +125,20 @@ h2{
     background:#1e293b;
     padding:20px;
     border-radius:12px;
+    transition:transform 0.2s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
 }
 
 .project h3{
     margin-bottom:10px;
+}
+
+.project p{
+    color:#cbd5e1;
+    line-height:1.5;
 }
 
 .project a{
@@ -134,10 +146,22 @@ h2{
     margin-top:15px;
     text-decoration:none;
     color:#38bdf8;
+    font-weight:bold;
 }
 
 .project a:hover{
     color:white;
+}
+
+.project .project-btn{
+    background:#38bdf8;
+    color:#0f172a;
+    padding:10px 16px;
+    border-radius:7px;
+}
+
+.project .project-btn:hover{
+    background:white;
 }
 
 footer{
@@ -145,6 +169,34 @@ footer{
     text-align:center;
     padding:20px;
     margin-top:50px;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    nav a{
+        margin:0 7px;
+        font-size:14px;
+    }
+
+    .hero{
+        padding:60px 15px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .container{
+        width:92%;
+    }
+
 }
 </style>
 
@@ -167,15 +219,20 @@ footer{
 
 <section class="hero">
 
-
-
 <h1>IT Technician</h1>
 
-<p>Computer • Networking • Printer • CCTV • Web Development</p>
+<p>
+Computer • Networking • Printer • CCTV • Web Development
+</p>
 
 <a href="resume.pdf" class="btn" target="_blank">
 📄 View Resume
 </a>
+
+<a href="https://ittechnician02.github.io/Resume-generator/"
+class="btn"
+target="_blank">
+📝 Resume Generator </a>
 
 <a href="#projects" class="btn">
 🚀 My Projects
@@ -213,14 +270,11 @@ Currently learning HTML, CSS, JavaScript, Python and CCNA.
 
 <div class="skill">🖨 Printer Repair</div>
 
-<div class="skill">📷 Cctv setup</div>
+<div class="skill">📷 CCTV Setup</div>
 
-<div class="skill">💻 Html and Css</div>
+<div class="skill">💻 HTML and CSS</div>
 
-<div class="skill">🎨 Ups battery repair</div>
-
-
-
+<div class="skill">🎨 UPS Battery Repair</div>
 
 </div>
 
@@ -234,15 +288,31 @@ Currently learning HTML, CSS, JavaScript, Python and CCNA.
 
 <div class="project">
 
+<h3>📝 ATS Resume Generator</h3>
+
+<p>
+Create professional and ATS-friendly resumes directly in your browser.
+Built using web technologies with a simple and responsive interface.
+</p>
+
+<a href="https://ittechnician02.github.io/Resume-generator/"
+class="project-btn"
+target="_blank">
+Open Resume Generator → </a>
+
+</div>
+
+<div class="project">
+
 <h3>💰 Budget Tracker</h3>
 
 <p>
 Simple budget calculator built using HTML.
 </p>
 
-<a href="https://ittechnician02.github.io/budget-tracker/" target="_blank">
-View Project →
-</a>
+<a href="https://ittechnician02.github.io/budget-tracker/"
+target="_blank">
+View Project → </a>
 
 </div>
 
@@ -251,12 +321,13 @@ View Project →
 <h3>💳 Debt Tracker</h3>
 
 <p>
-A debt management web application built using HTML, CSS and JavaScript. Track monthly installments, due dates, payment status and outstanding balances.
+A debt management web application built using HTML, CSS and JavaScript.
+Track monthly installments, due dates, payment status and outstanding balances.
 </p>
 
-<a href="https://ittechnician02.github.io/debt-tracker/" target="_blank">
-View Project →
-</a>
+<a href="https://ittechnician02.github.io/debt-tracker/"
+target="_blank">
+View Project → </a>
 
 </div>
 
@@ -287,7 +358,8 @@ Coming Soon
 <p>
 GitHub :
 <a href="https://github.com/ITtechnician02"
-style="color:#38bdf8;" target="_blank">
+style="color:#38bdf8;"
+target="_blank">
 ITtechnician02
 </a>
 </p>
@@ -295,7 +367,8 @@ ITtechnician02
 <p style="margin-top:15px;">
 Resume :
 <a href="resume.pdf"
-style="color:#38bdf8;" target="_blank">
+style="color:#38bdf8;"
+target="_blank">
 View Resume
 </a>
 </p>
